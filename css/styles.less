@@ -1,0 +1,117 @@
+// out: styles.css, compress: true
+
+/* RESET BY MEYERWEB */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}/**/article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
+
+@import (inline) url('http://fonts.googleapis.com/css?family=Lato:400,900');
+
+// Variables
+@blue: #2C3E50;
+@lightblue: #34495E;
+@sunflower: #F1C40F;
+@orange: #F39C12;
+@pomegranate: #C0392B;
+@turquoise: #1ABC9C;
+@greensea: #16A085;
+@pumpkin: #D35400;
+@carrot: #E67E22;
+@emerald: #2ECC71;
+@nephritis: #27AE60;
+@clouds: #ECF0F1;
+
+@gridWidth: 980px;
+
+// Mixins
+.box-sizing(@p) {
+    box-sizing: @p;
+    -moz-box-sizing: @p;
+    -webkit-box-sizing: @p;
+    -ms-box-sizing: @p;
+    -o-box-sizing: @p;
+}
+
+.transition(@p,@d) {
+    -webkit-transition: @p @d;
+       -moz-transition: @p @d;
+        -ms-transition: @p @d;
+         -o-transition: @p @d;
+            transition: @p @d;
+}
+
+.columns(@c,@g,@w) {
+    -webkit-column-count: @c;
+       -moz-column-count: @c;
+            column-count: @c;
+    -webkit-column-gap: @g;
+       -moz-column-gap: @g;
+            column-gap: @g;
+    -webkit-column-width: @w;
+       -moz-column-width: @w;
+            column-width: @w;
+}
+
+.fontsmoothing() {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* BASE ELEMENTS & UTILITIES */
+* {
+    .box-sizing(border-box);
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: white;
+    background: @blue;
+    line-height: 1.5em;
+    .fontsmoothing();
+}
+
+h1,h2,h3 {
+    font-weight: 900;
+    line-height: 1.33em;
+}
+
+h1 {
+    font-size: 2.33em;
+    margin: 0 0 1.5em 0;
+}
+
+p+p {
+    margin-top: 1em;
+}
+
+.wrap {
+    width: 100%;
+    padding: 0 .66em;
+    @media screen and (min-width: @gridWidth) {
+        width: @gridWidth;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+
+.centered {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.small {
+    font-size: .8em;
+}
+
+/* SITE STYLING */
+#logo {
+    width: 100%;
+    height: auto;
+    @media screen and (min-width: @gridWidth) {
+        width: auto;
+    }
+}
