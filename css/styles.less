@@ -81,8 +81,23 @@ h1 {
     margin: 0 0 1.5em 0;
 }
 
+h2 {
+    font-size: 2em;
+    margin: 1em 0;
+}
+
 p+p {
     margin-top: 1em;
+}
+
+a {
+    color: inherit;
+    outline: none !important;
+    text-decoration: none;
+    .transition(color, .25s);
+    &:hover {
+        color: darken(white, 20%);
+    }
 }
 
 .wrap {
