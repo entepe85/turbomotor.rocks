@@ -130,3 +130,21 @@ a {
         width: auto;
     }
 }
+
+.btn {
+    background: transparent;
+    border: 3px solid white;
+    border-radius: 5px;
+    color: white;
+    font-size: 1em;
+    .transition(all, .2s);
+    &.btn-large {
+        margin: 1em 0;
+        padding: 10px 1em;
+    }
+    &:hover {
+        background: white;
+        color: @blue;
+        cursor: pointer;
+    }
+}
