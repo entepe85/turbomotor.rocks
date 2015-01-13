@@ -19,7 +19,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 @nephritis: #27AE60;
 @clouds: #ECF0F1;
 
-@gridWidth: 980px;
+@gridWidth: 960px;
 
 // Mixins
 .box-sizing(@p) {
@@ -101,10 +101,9 @@ a {
 }
 
 .wrap {
-    width: 100%;
+    max-width: @gridWidth;
     padding: 0 .66em;
     @media screen and (min-width: @gridWidth) {
-        width: @gridWidth;
         margin: 0 auto;
         padding: 0;
     }
@@ -126,9 +125,7 @@ a {
 #logo {
     width: 100%;
     height: auto;
-    @media screen and (min-width: @gridWidth) {
-        width: auto;
-    }
+    margin: 8rem 0;
 }
 
 .btn {
